@@ -25,12 +25,7 @@ class CodeScanPreviewInnerView : UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         previewLayer?.frame = self.bounds
-    }
-    
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-    }
-    
+    }    
 }
 
 struct CodeScanPreviewView : UIViewRepresentable {
@@ -40,6 +35,7 @@ struct CodeScanPreviewView : UIViewRepresentable {
     private var camera: CodeScanCamera?
     
     init (_ metadataDelegate: @escaping (AVCaptureVideoPreviewLayer, [AVMetadataObject])->Void) {
+        // カメラの初期化
         camera = CodeScanCamera(metadataDelegate: metadataDelegate)
     }
     
@@ -47,9 +43,11 @@ struct CodeScanPreviewView : UIViewRepresentable {
         let view = CodeScanPreviewInnerView(camera: camera)
         // プレビューの開始
         camera?.start(previewDelegate: { (previewLayer: AVCaptureVideoPreviewLayer) -> Void in
-            
+            // 背景色の指定
             view.backgroundColor = UIColor.gray
+            // プレビュー画面のGravity設定を指定
             previewLayer.videoGravity = .resizeAspectFill
+            // レイヤーオブジェクトとビューを関連付けする
             view.layer.addSublayer(previewLayer)
             
             view.previewLayer = previewLayer

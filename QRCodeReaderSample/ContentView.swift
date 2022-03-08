@@ -24,7 +24,7 @@ struct ContentView: View {
                     .frame(width: ret.width, height: ret.height)
                     .position(x: ret.x, y: ret.y)
             }
-        }
+        }.frame(width: 300, height: 500)
     }
 }
 
