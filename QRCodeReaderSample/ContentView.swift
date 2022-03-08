@@ -15,16 +15,24 @@ struct ContentView: View {
     var body: some View {
 
         ZStack {
-            CodeScanPreviewView(model.foundCode)
-                .zIndex(0.0)
+            Text(0 < model.results.count ? model.results[0].code : "")
+                .font(.subheadline)
+                .zIndex(1.0)
+                .frame(width: UIScreen.main.bounds.size.width, height: 50)
+                .position(x: UIScreen.main.bounds.size.width/2.0, y: 50)
             
-            ForEach(model.results, id:\.self) { ret in
-                Rectangle()
-                    .stroke(Color.red, lineWidth: 2)
-                    .frame(width: ret.width, height: ret.height)
-                    .position(x: ret.x, y: ret.y)
-            }
-        }.frame(width: 300, height: 500)
+            ZStack {
+                CodeScanPreviewView(model.foundCode)
+                    .zIndex(0.0)
+                
+                ForEach(model.results, id:\.self) { ret in
+                    Rectangle()
+                        .stroke(Color.red, lineWidth: 2)
+                        .frame(width: ret.width, height: ret.height)
+                        .position(x: ret.x, y: ret.y)
+                }
+            }.frame(width: 300, height: 500)
+        }
     }
 }
 

@@ -36,13 +36,13 @@ class CodeScanModel: ObservableObject {
                 let barCode = layer.transformedMetadataObject(for: metadata) as! AVMetadataMachineReadableCodeObject
                 
                 // 検出結果をCodeScanResultオブジェクトに変換
-                let ret = CodeScanResult(code: "\(barCode.stringValue)",
+                let ret = CodeScanResult(code: "\(barCode.stringValue ?? "nil")",
                                          x: barCode.bounds.origin.x + barCode.bounds.size.width / 2.0,
                                          y: barCode.bounds.origin.y + barCode.bounds.size.height / 2.0,
                                          width: barCode.bounds.size.width, height: barCode.bounds.size.height)
                 results.append(ret)
                 
-                print("origin=\(barCode.bounds.origin), size=\(barCode.bounds.size)")
+                print("\(ret.code)")
             }
         }
     }
