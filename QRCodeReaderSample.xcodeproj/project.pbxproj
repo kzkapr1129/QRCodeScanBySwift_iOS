@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7325C5D27D71B29004429EA /* CodeScanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7325C5C27D71B29004429EA /* CodeScanModel.swift */; };
 		A732853527D33BB300886BB1 /* QRCodeReaderSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732853427D33BB300886BB1 /* QRCodeReaderSampleApp.swift */; };
 		A732853727D33BB300886BB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732853627D33BB300886BB1 /* ContentView.swift */; };
 		A732853927D33BBE00886BB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A732853827D33BBE00886BB1 /* Assets.xcassets */; };
@@ -14,6 +15,8 @@
 		A732854627D33BBE00886BB1 /* QRCodeReaderSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732854527D33BBE00886BB1 /* QRCodeReaderSampleTests.swift */; };
 		A732855027D33BBE00886BB1 /* QRCodeReaderSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732854F27D33BBE00886BB1 /* QRCodeReaderSampleUITests.swift */; };
 		A732855227D33BBE00886BB1 /* QRCodeReaderSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732855127D33BBE00886BB1 /* QRCodeReaderSampleUITestsLaunchTests.swift */; };
+		A7C9D4A427D6D4850050FD28 /* CodeScanCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C9D4A327D6D4850050FD28 /* CodeScanCamera.swift */; };
+		A7C9D4A627D6E0470050FD28 /* CodeScanPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C9D4A527D6E0470050FD28 /* CodeScanPreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7325C5C27D71B29004429EA /* CodeScanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScanModel.swift; sourceTree = "<group>"; };
 		A732853127D33BB300886BB1 /* QRCodeReaderSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCodeReaderSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A732853427D33BB300886BB1 /* QRCodeReaderSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderSampleApp.swift; sourceTree = "<group>"; };
 		A732853627D33BB300886BB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,8 @@
 		A732854B27D33BBE00886BB1 /* QRCodeReaderSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRCodeReaderSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A732854F27D33BBE00886BB1 /* QRCodeReaderSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderSampleUITests.swift; sourceTree = "<group>"; };
 		A732855127D33BBE00886BB1 /* QRCodeReaderSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A7C9D4A327D6D4850050FD28 /* CodeScanCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScanCamera.swift; sourceTree = "<group>"; };
+		A7C9D4A527D6E0470050FD28 /* CodeScanPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScanPreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7325C5B27D71B08004429EA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A7325C5C27D71B29004429EA /* CodeScanModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		A732852827D33BB300886BB1 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +108,8 @@
 		A732853327D33BB300886BB1 /* QRCodeReaderSample */ = {
 			isa = PBXGroup;
 			children = (
+				A7325C5B27D71B08004429EA /* model */,
+				A7C9D4A227D6D4300050FD28 /* camera */,
 				A732853427D33BB300886BB1 /* QRCodeReaderSampleApp.swift */,
 				A732853627D33BB300886BB1 /* ContentView.swift */,
 				A732853827D33BBE00886BB1 /* Assets.xcassets */,
@@ -125,6 +141,15 @@
 				A732855127D33BBE00886BB1 /* QRCodeReaderSampleUITestsLaunchTests.swift */,
 			);
 			path = QRCodeReaderSampleUITests;
+			sourceTree = "<group>";
+		};
+		A7C9D4A227D6D4300050FD28 /* camera */ = {
+			isa = PBXGroup;
+			children = (
+				A7C9D4A327D6D4850050FD28 /* CodeScanCamera.swift */,
+				A7C9D4A527D6E0470050FD28 /* CodeScanPreviewView.swift */,
+			);
+			path = camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +237,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = A732852827D33BB300886BB1;
 			productRefGroup = A732853227D33BB300886BB1 /* Products */;
@@ -257,8 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7C9D4A427D6D4850050FD28 /* CodeScanCamera.swift in Sources */,
+				A7325C5D27D71B29004429EA /* CodeScanModel.swift in Sources */,
 				A732853727D33BB300886BB1 /* ContentView.swift in Sources */,
 				A732853527D33BB300886BB1 /* QRCodeReaderSampleApp.swift in Sources */,
+				A7C9D4A627D6E0470050FD28 /* CodeScanPreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +449,7 @@
 				DEVELOPMENT_TEAM = 7AN9NF8AD4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "QRCodeを読み取る為に使用します。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -451,6 +479,7 @@
 				DEVELOPMENT_TEAM = 7AN9NF8AD4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "QRCodeを読み取る為に使用します。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
